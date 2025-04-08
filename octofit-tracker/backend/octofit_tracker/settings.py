@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-+@^f4zp)!j*)9ka@0t6ox=u9097v!ayl9xzyne6finw5$9#kut
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -52,6 +52,17 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "DELETE",
+    "OPTIONS",
+]
+CORS_ALLOW_HEADERS = [
+    "content-type",
+    "authorization",
+]
 
 ROOT_URLCONF = "octofit_tracker.urls"
 
